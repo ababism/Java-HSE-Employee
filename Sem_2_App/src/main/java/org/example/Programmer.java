@@ -13,7 +13,7 @@ class Programmer extends Employee implements SocialCreditable {
         taskList = new ArrayList<Task>();
     }
 
-    public void DoAllTasks() {
+    public void doAllTasks() {
         taskList.forEach(task -> task.status = true);
         System.out.printf("%s Programmer has done all tasks\n", getName());
     }

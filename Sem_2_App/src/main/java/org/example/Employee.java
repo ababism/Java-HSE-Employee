@@ -14,7 +14,7 @@ abstract class Employee {
     public Employee(String name, Integer salary) {
         this.name = name;
         this.salary = salary;
-        Organization.AddEmployee(this);
+        Organization.addEmployee(this);
     }
 
 
@@ -56,11 +56,11 @@ abstract class Employee {
     public static class Organization {
         static protected List<Employee> employees = new ArrayList<Employee>();
 
-        private static void AddEmployee(Employee employee) {
+        private static void addEmployee(Employee employee) {
             employees.add(employee);
         }
 
-        public static @NotNull Integer SalarySum() {
+        public static @NotNull Integer salarySum() {
             return employees.stream().mapToInt(i -> i.salary).sum();
         }
     }

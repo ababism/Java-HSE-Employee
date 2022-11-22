@@ -17,7 +17,7 @@ public class Main {
         System.out.println(executive.addProgrammerToManager(programmer, executive));
 
         System.out.print("_______________________________________________\n");
-        System.out.printf("Org should pay: %d\n", Employee.Organization.SalarySum());
+        System.out.printf("Org should pay: %d\n", Employee.Organization.salarySum());
         System.out.print("_______________________________________________\n");
 
         manager.setSalary(junior, 1250);
@@ -33,15 +33,15 @@ public class Main {
         manager.setSalary(secretary, Manager.generateNewSalaryIncrease(secretary));
         System.out.print("\n");
 
-        secretary.GenerateTasks(manager);
-        secretary.GenerateTasks(programmer);
+        secretary.generateTasks(manager);
+        secretary.generateTasks(programmer);
 
         programmer.printTasks();
 
         executive.setSalary(programmer, programmer.getSalary() + Manager.generateNewSalaryIncrease(programmer));
         System.out.print("\n");
 
-        programmer.DoAllTasks();
+        programmer.doAllTasks();
         programmer.printTasks();
         executive.setSalary(programmer, programmer.getSalary() + Manager.generateNewSalaryIncrease(programmer));
 

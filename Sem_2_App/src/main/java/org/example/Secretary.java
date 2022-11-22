@@ -19,7 +19,7 @@ class Secretary extends Employee {
             "Reorder JSONs",
             "Have a meetup");
 
-    public void GenerateTasks(Employee employee) {
+    public void generateTasks(Employee employee) {
         if (employee instanceof Programmer) {
             int amount = Math.abs(brain.nextInt() % 3) + 1;
             for (int it = 0; it < amount; ++it) {
