@@ -31,20 +31,20 @@ abstract class Employee {
     //        this.salary = salary >= 0 ? salary : 0;
     //    }
     // Lets make it
-    public void setSalary(Employee employee, int new_salary) {
+    public void setSalary(Employee employee, int newSalary) {
         if (this instanceof Executive) {
-            employee.salary = new_salary;
+            employee.salary = newSalary;
             System.out.printf("Salary of %s %s changed to %d by %s\n",
-                    employee.getName(), employee.getClass().getSimpleName(), new_salary, name);
+                    employee.getName(), employee.getClass().getSimpleName(), newSalary, name);
         } else if (this instanceof Manager) {
             if (employee instanceof Programmer && ((Manager) this).programmerList.contains((Programmer) employee)) {
-                employee.salary = new_salary;
+                employee.salary = newSalary;
                 System.out.printf("Salary of %s %s changed to %d by %s\n",
-                        employee.getName(), employee.getClass().getSimpleName(), new_salary, name);
+                        employee.getName(), employee.getClass().getSimpleName(), newSalary, name);
             } else if (employee instanceof Secretary) {
-                employee.salary = new_salary;
+                employee.salary = newSalary;
                 System.out.printf("Salary of %s %s changed to %d by %s\n",
-                        employee.getName(), employee.getClass().getSimpleName(), new_salary, name);
+                        employee.getName(), employee.getClass().getSimpleName(), newSalary, name);
             } else {
                 System.out.println(this.getClass().getSimpleName() + " " + name + " cannot change salary");
             }
